@@ -18,3 +18,5 @@ fi
 # checkout dotfiles from repo
 config checkout
 config config status.showUntrackedFiles no
+#clean up cloned repo
+rm -r $HOME/.dotfiles/
