@@ -13,4 +13,4 @@ if [ $? = 0 ]; then
 fi
 # checkout dotfiles from repo
 config checkout
-config config status.showUntrackedFiles no
+git config --global status.showUntrackedFiles no
