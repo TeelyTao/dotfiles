@@ -10,6 +10,7 @@ if [ $? = 0 ]; then
   else
     echo "Moving existing dotfiles to ~/.dotfiles-backup";
     config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .dotfiles-backup/{}
-fi# checkout dotfiles from repo
+fi
+# checkout dotfiles from repo
 config checkout
 config config status.showUntrackedFiles no
