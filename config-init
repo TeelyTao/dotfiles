@@ -14,3 +14,4 @@ fi
 # checkout dotfiles from repo
 config checkout
 git config --global status.showUntrackedFiles no
+exit 0
