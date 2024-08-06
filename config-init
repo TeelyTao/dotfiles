@@ -12,6 +12,8 @@ if [ $? = 0 ]; then
   else
     echo "Moving existing dotfiles to ~/.dotfiles-backup";
     config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .dotfiles-backup/{}
+    #Remove config-init and README.md
+    rm config-init README.md
 fi
 # checkout dotfiles from repo
 config checkout
