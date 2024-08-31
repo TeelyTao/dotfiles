@@ -1,0 +1,33 @@
+{
+	"layer": "top",
+	"position": "top",
+	"modules-right": [
+		"custom/pipewire",
+		"cpu",
+		"memory",
+		"disk",
+		"tray",
+		"pipewire",
+		"network",
+		"battery",
+	],
+	"modules-center": ["clock"],
+	"modules-left": ["hyprland/workspaces"],
+	"hyprland/workspaces": {
+     		"format": "{name}",
+     		"on-scroll-up": "hyprctl dispatch workspace e+1",
+     		"on-scroll-down": "hyprctl dispatch workspace e-1",
+		"max-length": 15,
+		"min-length": 3,
+		"label": "{name}",
+		"padding": 1
+	},
+	"custom/pipewire": {
+		"exec": "pw-volume status",
+    		"format": "{icon}",
+    		"return-type": "json",
+    		"signal": 8,
+    		"interval": 1,
+		"format": "Volume {percentage}%"
+	}
+}
